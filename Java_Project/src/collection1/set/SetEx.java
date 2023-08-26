@@ -1,7 +1,9 @@
 package collection1.set;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.List;
 
 public class SetEx {
     public static void main(String[] args) {
@@ -33,6 +35,33 @@ public class SetEx {
             }
         }
         System.out.println(set5);
+
+
+        List<Integer> duplicate = new ArrayList<>();
+        duplicate.add(5);
+        duplicate.add(4);
+        duplicate.add(4);
+        duplicate.add(8);
+        duplicate.add(4);
+        duplicate.add(8);
+        duplicate.add(8);
+
+        List<Integer> noDuplicate = new ArrayList<>();
+        // 5
+
+
+        //           8
+        for (Integer number : duplicate) {
+            //      (5, 4, 8)         5,4,4,8,4,8
+            if (!noDuplicate.contains(number)) {
+                //              5,4,[!4],8,[!4],[!8] ------- 5,4,8
+//                                     no     no
+
+                noDuplicate.add(number);
+            }
+        }
+        System.out.println(duplicate);
+        System.out.println(noDuplicate);
 
 
     }

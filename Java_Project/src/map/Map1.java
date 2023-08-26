@@ -1,34 +1,9 @@
-package collection1.map;
+package map;
 
 import java.util.*;
 
 public class Map1 {
     public static void main(String[] args) {
-        List<Integer> duplicate = new ArrayList<>();
-        duplicate.add(5);
-        duplicate.add(4);
-        duplicate.add(4);
-        duplicate.add(8);
-        duplicate.add(4);
-        duplicate.add(8);
-        duplicate.add(8);
-
-        List<Integer> noDuplicate = new ArrayList<>();
-        // 5
-
-
-        //           8
-        for (Integer number : duplicate) {
-            //      (5, 4, 8)         5,4,4,8,4,8
-            if (!noDuplicate.contains(number)) {
-                //              5,4,[!4],8,[!4],[!8] ------- 5,4,8
-//                                     no     no
-
-                noDuplicate.add(number);
-            }
-        }
-        System.out.println(duplicate);
-        System.out.println(noDuplicate);
 
         // Unpredictable order
         HashMap<String, Integer> mobOperators = new HashMap<>();
